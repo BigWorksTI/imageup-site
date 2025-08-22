@@ -21,7 +21,7 @@ const Authority = () => {
               Estudos comprovam: anúncios com{" "}
               <span className="text-electric font-semibold">imagens otimizadas</span>{" "}
               podem aumentar em até{" "}
-              <span className="text-electric font-bold text-3xl">80%</span>{" "}
+              <span className="text-electric font-bold text-3xl">25%</span>{" "}
               a taxa de conversão.
             </p>
             

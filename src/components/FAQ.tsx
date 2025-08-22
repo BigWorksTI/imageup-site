@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "O ImageUp realmente ajuda a vender mais?",
-    answer: "Sim! Imagens otimizadas chamam mais atenção, aumentam cliques e elevam a taxa de conversão. Estudos mostram que anúncios com imagens profissionais podem aumentar as vendas em até 80%. Mais conversão = mais vendas."
+    answer: "Sim! Imagens otimizadas chamam mais atenção, aumentam cliques e elevam a taxa de conversão. Estudos mostram que anúncios com imagens profissionais podem aumentar as vendas em até 25%. Mais conversão = mais vendas."
   },
   {
     question: "Preciso ser designer ou ter experiência?",
@@ -95,13 +95,13 @@ const FAQ = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:suporte@imageup.com"
+              href="mailto:imageup@bigworks.com.br"
               className="text-electric hover:text-electric-dark font-semibold transition-colors"
             >
-              📧 suporte@imageup.com
+              📧 imageup@bigworks.com.br
             </a>
             <a 
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5548998386116"
               className="text-electric hover:text-electric-dark font-semibold transition-colors"
             >
               📱 WhatsApp

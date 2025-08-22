@@ -65,34 +65,6 @@ const Benefits = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="bg-card rounded-2xl p-8 shadow-elegant">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-dark mb-4">
-              Transforme suas métricas hoje mesmo
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-6">
-                <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                  +80%
-                </div>
-                <div className="text-gray-medium">Taxa de conversão</div>
-              </div>
-              <div className="p-6">
-                <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                  +150%
-                </div>
-                <div className="text-gray-medium">Cliques nos anúncios</div>
-              </div>
-              <div className="p-6">
-                <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                  -60%
-                </div>
-                <div className="text-gray-medium">Custo por aquisição</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -81,11 +81,15 @@ const HowItWorks = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="cta" size="xl">
-            Quero começar agora
+          <Button 
+            variant="cta" 
+            size="xl"
+            onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
+          >
+            Quero começar agora!
           </Button>
           <p className="text-sm text-gray-medium mt-4">
-            Sem compromisso • Comece a vender mais hoje mesmo
+            Sem compromisso • Comece a vender mais hoje mesmo!
           </p>
         </div>
       </div>

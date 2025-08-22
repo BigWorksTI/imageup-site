@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/before-after-hero.jpg";
+import beforeImage from "@/assets/before-image.png";
+import afterImage from "@/assets/after-image.png";
 
 const Hero = () => {
   return (
@@ -25,8 +26,9 @@ const Hero = () => {
                 variant="hero" 
                 size="xl"
                 className="w-full sm:w-auto"
+                onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
               >
-                Compre créditos e venda mais agora
+                Peça uma imagem grátis
               </Button>
               
               <Button 
@@ -45,18 +47,32 @@ const Hero = () => {
           
           {/* Right Image */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-500 animate-float">
-              <img 
-                src={heroImage} 
-                alt="Antes e depois - otimização de imagens para anúncios"
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative">
+                <img 
+                  src={beforeImage} 
+                  alt="Imagem antes da otimização"
+                  className="w-full h-auto rounded-lg shadow-elegant"
+                />
+                <div className="absolute bottom-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-sm font-semibold">
+                  Antes
+                </div>
+              </div>
+              <div className="relative">
+                <img 
+                  src={afterImage} 
+                  alt="Imagem depois da otimização"
+                  className="w-full h-auto rounded-lg shadow-elegant"
+                />
+                <div className="absolute bottom-2 left-2 bg-electric text-white px-2 py-1 rounded text-sm font-semibold">
+                  Depois
+                </div>
+              </div>
             </div>
             
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow animate-pulse-glow">
-              <span className="text-white font-bold text-lg">+80%</span>
+              <span className="text-white font-bold text-lg">+25%</span>
             </div>
             
             <div className="absolute -bottom-6 -left-6 w-24 h-12 bg-electric rounded-full flex items-center justify-center shadow-primary">

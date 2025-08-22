@@ -37,6 +37,7 @@ const CTAFinal = () => {
               variant="premium" 
               size="xl"
               className="text-2xl py-6 px-12 mb-6"
+              onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
             >
               🚀 Comprar créditos e aumentar minhas vendas agora
             </Button>
@@ -50,8 +51,8 @@ const CTAFinal = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
               <div className="text-3xl mb-3">🎯</div>
-              <div className="font-semibold mb-2">Resultados Garantidos</div>
-              <div className="text-sm text-gray-300">Se não ficar satisfeito, devolvemos seus créditos</div>
+              <div className="font-semibold mb-2">Atinja mais público</div>
+              <div className="text-sm text-gray-300">Com imagens mais atrativas, mais clientes</div>
             </div>
             
             <div className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
@@ -67,16 +68,6 @@ const CTAFinal = () => {
             </div>
           </div>
 
-          {/* Urgency */}
-          <div className="bg-electric/10 border border-electric/30 rounded-xl p-6">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="text-2xl">⏰</span>
-              <span className="text-electric font-bold text-lg">Oferta por tempo limitado!</span>
-            </div>
-            <p className="text-gray-200">
-              Primeiros 100 clientes ganham <span className="text-electric font-bold">25% de créditos extras</span> em qualquer plano
-            </p>
-          </div>
         </div>
       </div>
     </section>

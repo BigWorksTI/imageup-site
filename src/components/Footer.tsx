@@ -1,4 +1,13 @@
+import { useState } from "react";
+import { Modal, ModalContent, ModalHeader, ModalTitle, ModalTrigger } from "@/components/ui/modal";
+
 const Footer = () => {
+  const [modalContent, setModalContent] = useState<{ title: string; content: string } | null>(null);
+
+  const openModal = (title: string, content: string) => {
+    setModalContent({ title, content });
+  };
+
   return (
     <footer className="bg-dark text-white py-12">
       <div className="container mx-auto px-6">
@@ -28,25 +37,14 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4 text-electric">Serviços</h3>
+            <h3 className="font-semibold mb-4 text-electric">Contato</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Otimização de Imagens</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Anúncios para E-commerce</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Posts para Redes Sociais</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Banners Publicitários</a></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="font-semibold mb-4 text-electric">Suporte</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Central de Ajuda</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Como Funciona</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Política de Reembolso</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
+              <li><a href="mailto:imageup@bigworks.com.br" className="hover:text-white transition-colors">📧 Email</a></li>
+              <li><a href="https://wa.me/5548998386116" className="hover:text-white transition-colors">📱 WhatsApp</a></li>
+              <li><a href="#como-funciona" className="hover:text-white transition-colors">Como Funciona</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
         </div>
@@ -57,9 +55,62 @@ const Footer = () => {
             © 2024 ImageUp. Todos os direitos reservados.
           </div>
           <div className="flex gap-6 text-sm text-gray-300">
-            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-            <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
-            <a href="#" className="hover:text-white transition-colors">LGPD</a>
+            <Modal>
+              <ModalTrigger asChild>
+                <button 
+                  onClick={() => openModal("Termos de Uso", "Aqui estarão os Termos de Uso completos do ImageUp.")}
+                  className="hover:text-white transition-colors"
+                >
+                  Termos de Uso
+                </button>
+              </ModalTrigger>
+              <ModalContent>
+                <ModalHeader>
+                  <ModalTitle>{modalContent?.title}</ModalTitle>
+                </ModalHeader>
+                <div className="py-4">
+                  <p className="text-sm text-gray-600">{modalContent?.content}</p>
+                </div>
+              </ModalContent>
+            </Modal>
+            
+            <Modal>
+              <ModalTrigger asChild>
+                <button 
+                  onClick={() => openModal("Política de Privacidade", "Aqui estará a Política de Privacidade completa do ImageUp.")}
+                  className="hover:text-white transition-colors"
+                >
+                  Política de Privacidade
+                </button>
+              </ModalTrigger>
+              <ModalContent>
+                <ModalHeader>
+                  <ModalTitle>{modalContent?.title}</ModalTitle>
+                </ModalHeader>
+                <div className="py-4">
+                  <p className="text-sm text-gray-600">{modalContent?.content}</p>
+                </div>
+              </ModalContent>
+            </Modal>
+            
+            <Modal>
+              <ModalTrigger asChild>
+                <button 
+                  onClick={() => openModal("LGPD", "Aqui estarão as informações sobre LGPD e tratamento de dados do ImageUp.")}
+                  className="hover:text-white transition-colors"
+                >
+                  LGPD
+                </button>
+              </ModalTrigger>
+              <ModalContent>
+                <ModalHeader>
+                  <ModalTitle>{modalContent?.title}</ModalTitle>
+                </ModalHeader>
+                <div className="py-4">
+                  <p className="text-sm text-gray-600">{modalContent?.content}</p>
+                </div>
+              </ModalContent>
+            </Modal>
           </div>
         </div>
       </div>

@@ -4,10 +4,11 @@ const plans = [
   {
     name: "Plano Inicial",
     subtitle: "perfeito para testar",
-    price: "R$ 49",
-    credits: "50 créditos",
+    price: "R$ 29,90",
+    originalPrice: "R$ 49,90",
+    credits: "5 créditos",
     features: [
-      "50 imagens otimizadas",
+      "5 imagens otimizadas",
       "Qualidade profissional",
       "Suporte por email",
       "Resultado em até 24h"
@@ -18,14 +19,14 @@ const plans = [
   {
     name: "Plano Mais Vendido",
     subtitle: "melhor custo-benefício",
-    price: "R$ 129",
-    credits: "150 créditos",
+    price: "R$ 249,90",
+    originalPrice: "R$ 499,90",
+    credits: "50 créditos",
     features: [
-      "150 imagens otimizadas",
+      "50 imagens otimizadas",
       "Qualidade premium",
       "Suporte prioritário",
-      "Resultado em até 12h",
-      "Bonus: 25 créditos extras"
+      "Resultado em até 12h"
     ],
     popular: true,
     variant: "premium" as const
@@ -33,14 +34,14 @@ const plans = [
   {
     name: "Plano Profissional",
     subtitle: "para e-commerces e tráfego pesado",
-    price: "R$ 299",
-    credits: "400 créditos",
+    price: "R$ 399,90",
+    originalPrice: "R$ 999,90",
+    credits: "100 créditos",
     features: [
-      "400 imagens otimizadas",
+      "100 imagens otimizadas",
       "Qualidade ultra premium",
       "Suporte VIP",
       "Resultado em até 6h",
-      "Bonus: 100 créditos extras",
       "Consultoria personalizada"
     ],
     popular: false,
@@ -62,7 +63,7 @@ const Pricing = () => {
             e comece hoje mesmo
           </h2>
           <p className="text-xl text-gray-medium max-w-2xl mx-auto">
-            Todos os planos incluem otimização profissional de imagens para anúncios, sem limites de qualidade.
+            Escolha o plano ideal para o seu negócio e comece a otimizar suas imagens hoje mesmo.
           </p>
         </div>
 
@@ -93,9 +94,14 @@ const Pricing = () => {
                   {plan.subtitle}
                 </p>
                 <div className="mb-2">
-                  <span className={`text-4xl font-bold ${plan.popular ? 'text-white' : 'text-dark'}`}>
-                    {plan.price}
-                  </span>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className={`text-4xl font-bold ${plan.popular ? 'text-white' : 'text-dark'}`}>
+                      {plan.price}
+                    </span>
+                  </div>
+                  <div className={`text-sm ${plan.popular ? 'text-white/60' : 'text-gray-medium'}`}>
+                    <span className="line-through">{plan.originalPrice}</span>
+                  </div>
                 </div>
                 <p className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-medium'}`}>
                   {plan.credits}
@@ -123,6 +129,7 @@ const Pricing = () => {
                 variant={plan.variant}
                 size="lg"
                 className="w-full"
+                onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
               >
                 Comprar agora
               </Button>
@@ -136,7 +143,7 @@ const Pricing = () => {
             💡 Como funcionam os créditos?
           </h3>
           <p className="text-gray-medium leading-relaxed max-w-3xl mx-auto">
-            Cada crédito permite otimizar uma imagem. Os créditos não expiram e você pode usar quando quiser. 
+            Cada crédito permite otimizar uma imagem. Cada imagem melhorada custa um crédito. Os créditos não expiram e você pode usar quando quiser. 
             Ideal para campanhas sazonais, testes A/B ou crescimento gradual do seu negócio.
           </p>
         </div>
