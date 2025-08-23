@@ -11,41 +11,19 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-white py-12">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="mb-8">
           {/* Logo and Description */}
-          <div className="md:col-span-2">
+          <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">IU</span>
               </div>
               <span className="text-xl font-bold">ImageUp</span>
             </div>
-            <p className="text-gray-300 leading-relaxed max-w-md">
+            <p className="text-gray-300 leading-relaxed">
               Transforme suas imagens comuns em anúncios de alta conversão. 
               Otimização profissional de imagens para aumentar suas vendas online.
             </p>
-            <div className="flex gap-4 mt-6">
-              <a href="#" className="w-10 h-10 bg-electric/20 rounded-lg flex items-center justify-center hover:bg-electric/30 transition-colors">
-                <span className="text-electric">📧</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-electric/20 rounded-lg flex items-center justify-center hover:bg-electric/30 transition-colors">
-                <span className="text-electric">📱</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-electric/20 rounded-lg flex items-center justify-center hover:bg-electric/30 transition-colors">
-                <span className="text-electric">💬</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-semibold mb-4 text-electric">Contato</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="mailto:imageup@bigworks.com.br" className="hover:text-white transition-colors">📧 Email</a></li>
-              <li><a href="https://wa.me/5548998386116" className="hover:text-white transition-colors">📱 WhatsApp</a></li>
-              <li><a href="#como-funciona" className="hover:text-white transition-colors">Como Funciona</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-            </ul>
           </div>
         </div>
 
