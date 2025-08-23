@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import beforeImage from "@/assets/before-image.jpg";
-import afterImage from "@/assets/after-image.png";
+import afterImage from "@/assets/depois-nova.png";
 
 const Hero = () => {
   return (
