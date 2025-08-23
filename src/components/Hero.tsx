@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import beforeImage from "@/assets/before-image.jpg";
-import afterImage from "@/assets/depois-nova.png";
+import ImageCarousel from "./ImageCarousel";
 
 const Hero = () => {
   return (
@@ -45,39 +44,9 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Right Image */}
+          {/* Right Image Carousel */}
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative">
-                <img 
-                  src={beforeImage} 
-                  alt="Imagem antes da otimização"
-                  className="w-full h-full object-cover rounded-lg shadow-elegant aspect-square"
-                />
-                <div className="absolute bottom-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-sm font-semibold">
-                  Antes
-                </div>
-              </div>
-              <div className="relative">
-                <img 
-                  src={afterImage} 
-                  alt="Imagem depois da otimização"
-                  className="w-full h-full object-cover rounded-lg shadow-elegant aspect-square"
-                />
-                <div className="absolute bottom-2 left-2 bg-gradient-primary text-white px-2 py-1 rounded text-sm font-semibold">
-                  Depois
-                </div>
-              </div>
-            </div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow animate-pulse-glow">
-              <span className="text-white font-bold text-lg">+25%</span>
-            </div>
-            
-            <div className="absolute -bottom-6 -left-6 w-24 h-12 bg-electric rounded-full flex items-center justify-center shadow-primary">
-              <span className="text-white font-semibold text-sm">Conversão</span>
-            </div>
+            <ImageCarousel />
           </div>
         </div>
       </div>
