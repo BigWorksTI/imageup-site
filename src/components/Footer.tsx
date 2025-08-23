@@ -30,7 +30,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-300 text-sm">
-            © 2024 ImageUp. Todos os direitos reservados.
+            © 2025 ImageUp. Todos os direitos reservados.
           </div>
           <div className="flex gap-6 text-sm text-gray-300">
             <Modal>
