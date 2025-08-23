@@ -64,7 +64,7 @@ const Hero = () => {
                   alt="Imagem depois da otimização"
                   className="w-full h-full object-cover rounded-lg shadow-elegant aspect-square"
                 />
-                <div className="absolute bottom-2 left-2 bg-electric text-white px-2 py-1 rounded text-sm font-semibold">
+                <div className="absolute bottom-2 left-2 bg-gradient-primary text-white px-2 py-1 rounded text-sm font-semibold">
                   Depois
                 </div>
               </div>
