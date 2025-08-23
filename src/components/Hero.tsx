@@ -52,7 +52,7 @@ const Hero = () => {
                 <img 
                   src={beforeImage} 
                   alt="Imagem antes da otimização"
-                  className="w-full h-auto rounded-lg shadow-elegant"
+                  className="w-full h-full object-cover rounded-lg shadow-elegant aspect-square"
                 />
                 <div className="absolute bottom-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-sm font-semibold">
                   Antes
@@ -62,7 +62,7 @@ const Hero = () => {
                 <img 
                   src={afterImage} 
                   alt="Imagem depois da otimização"
-                  className="w-full h-auto rounded-lg shadow-elegant"
+                  className="w-full h-full object-cover rounded-lg shadow-elegant aspect-square"
                 />
                 <div className="absolute bottom-2 left-2 bg-electric text-white px-2 py-1 rounded text-sm font-semibold">
                   Depois
