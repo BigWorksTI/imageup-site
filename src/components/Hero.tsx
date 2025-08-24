@@ -1,20 +1,29 @@
 import { Button } from "@/components/ui/button";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-subtle min-h-screen flex items-center">
-      <div className="container mx-auto px-6 py-20">
+    <section className="relative overflow-hidden min-h-screen flex items-center">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40" />
+      
+      <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex justify-center">
           {/* Content */}
           <div className="text-center max-w-4xl">
-            <h1 className="text-5xl lg:text-6xl font-bold text-dark leading-tight mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
               Otimização de imagens para anúncios que{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
                 aumentam suas vendas
               </span>
             </h1>
             
-            <h2 className="text-xl lg:text-2xl text-gray-medium mb-8 leading-relaxed">
+            <h2 className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
               Transforme suas imagens comuns em anúncios de alta conversão. 
               Rápido, acessível e sem complicação.
             </h2>
@@ -32,13 +41,13 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="xl"
-                className="w-full sm:w-auto text-dark border-gray-medium hover:bg-gray-light"
+                className="w-full sm:w-auto text-white border-white/30 hover:bg-white/10 backdrop-blur-sm"
               >
                 Ver como funciona
               </Button>
             </div>
             
-            <div className="mt-8 text-sm text-gray-medium">
+            <div className="mt-8 text-sm text-white/80 drop-shadow-md">
               ✅ Sem mensalidade • ✅ Pague apenas pelo que usar • ✅ Resultados profissionais
             </div>
           </div>
