@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import ImageComparison from "./ImageComparison";
 import beforeImage from "@/assets/before-image.jpg";
 import afterImage from "@/assets/depois-nova.png";
-import beforeFood from "@/assets/before-image.jpg"; // Temporário - substitua pela imagem de comida
+import beforeFood from "@/assets/before-image.jpg";
 import afterFood from "@/assets/after-food.png";
+import newBefore from "@/assets/new-before.jpg";
+import newAfter from "@/assets/new-after.png";
 
 const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,19 +14,24 @@ const ImageCarousel = () => {
   const slides = [
     {
       id: 1,
-      beforeImage,
-      afterImage,
+      beforeImage: newBefore,
+      afterImage: newAfter,
       beforeAlt: "Imagem antes da otimização",
-      afterAlt: "Imagem depois da otimização",
-      category: "Produto"
+      afterAlt: "Imagem depois da otimização"
     },
     {
       id: 2,
+      beforeImage,
+      afterImage,
+      beforeAlt: "Imagem antes da otimização",
+      afterAlt: "Imagem depois da otimização"
+    },
+    {
+      id: 3,
       beforeImage: beforeFood,
       afterImage: afterFood,
       beforeAlt: "Foto de comida antes da otimização",
-      afterAlt: "Foto de comida depois da otimização",
-      category: "Gastronomia"
+      afterAlt: "Foto de comida depois da otimização"
     }
   ];
 
@@ -79,21 +86,6 @@ const ImageCarousel = () => {
         ))}
       </div>
 
-      {/* Category Label */}
-      <div className="text-center mt-2">
-        <span className="text-sm text-gray-medium font-medium">
-          {slides[currentSlide].category}
-        </span>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow animate-pulse-glow">
-        <span className="text-white font-bold text-lg">+25%</span>
-      </div>
-      
-      <div className="absolute -bottom-6 -left-6 w-24 h-12 bg-electric rounded-full flex items-center justify-center shadow-primary">
-        <span className="text-white font-semibold text-sm">Conversão</span>
-      </div>
     </div>
   );
 };
