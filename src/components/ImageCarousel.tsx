@@ -44,8 +44,8 @@ const ImageCarousel = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="aspect-square max-h-[80vh] max-w-[80vh] mx-auto">
+    <div className="relative w-full h-full">
+      <div className="w-full h-full">
         <ImageComparison
           beforeImage={slides[currentSlide].beforeImage}
           afterImage={slides[currentSlide].afterImage}

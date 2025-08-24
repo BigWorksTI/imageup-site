@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import ImageCarousel from "@/components/ImageCarousel";
 import HowItWorks from "@/components/HowItWorks";
 import Benefits from "@/components/Benefits";
 import Authority from "@/components/Authority";
@@ -15,6 +16,22 @@ const Index = () => {
       
       <main>
         <Hero />
+        
+        {/* Image Carousel Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="flex justify-center">
+              <div style={{
+                width: 'min(80vh, 80vw)',
+                height: 'min(80vh, 80vw)',
+                aspectRatio: '1'
+              }}>
+                <ImageCarousel />
+              </div>
+            </div>
+          </div>
+        </section>
+        
         <div id="como-funciona">
           <HowItWorks />
         </div>

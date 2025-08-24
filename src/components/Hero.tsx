@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button";
-import ImageCarousel from "./ImageCarousel";
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-subtle min-h-screen flex items-center">
       <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
+        <div className="flex justify-center">
+          {/* Content */}
+          <div className="text-center max-w-4xl">
             <h1 className="text-5xl lg:text-6xl font-bold text-dark leading-tight mb-6">
               Otimização de imagens para anúncios que{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -20,7 +19,7 @@ const Hero = () => {
               Rápido, acessível e sem complicação.
             </h2>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="hero" 
                 size="xl"
@@ -42,11 +41,6 @@ const Hero = () => {
             <div className="mt-8 text-sm text-gray-medium">
               ✅ Sem mensalidade • ✅ Pague apenas pelo que usar • ✅ Resultados profissionais
             </div>
-          </div>
-          
-          {/* Right Image Carousel */}
-          <div className="relative">
-            <ImageCarousel />
           </div>
         </div>
       </div>
