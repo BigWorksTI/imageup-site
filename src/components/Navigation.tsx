@@ -52,7 +52,7 @@ const Navigation = () => {
           <Button 
             variant="hero" 
             size="sm"
-            onClick={() => scrollToSection('precos')}
+            onClick={() => window.open('https://imageup.vps.bigworks.com.br/register', '_blank')}
           >
             Começar agora
           </Button>

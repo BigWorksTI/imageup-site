@@ -84,7 +84,7 @@ const HowItWorks = () => {
           <Button 
             variant="cta" 
             size="xl"
-            onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
+            onClick={() => window.open('https://imageup.vps.bigworks.com.br/register', '_blank')}
           >
             Quero começar agora!
           </Button>
