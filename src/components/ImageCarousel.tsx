@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import ImageComparison from "./ImageComparison";
 import beforeImage from "@/assets/before-image.jpg";
 import afterImage from "@/assets/depois-nova.png";
-import beforeFood from "@/assets/before-image.jpg";
+import beforeFood from "@/assets/before-food-new.png";
 import afterFood from "@/assets/after-food.png";
 import newBefore from "@/assets/new-before.jpg";
 import newAfter from "@/assets/new-after.png";
