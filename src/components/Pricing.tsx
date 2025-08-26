@@ -13,7 +13,7 @@ const plans = [
       "1 imagem otimizada",
       "Qualidade profissional",
       "Suporte por email",
-      "Resultado em até 24h"
+      "Resultado em poucos minutos"
     ],
     popular: false,
     variant: "outline" as const
@@ -30,7 +30,7 @@ const plans = [
       "5 imagens otimizadas",
       "Qualidade profissional",
       "Suporte por email",
-      "Resultado em até 24h"
+      "Resultado em poucos minutos"
     ],
     popular: false,
     variant: "outline" as const
@@ -47,7 +47,7 @@ const plans = [
       "10 imagens otimizadas",
       "Qualidade profissional",
       "Suporte por email",
-      "Resultado em até 24h"
+      "Resultado em poucos minutos"
     ],
     popular: false,
     variant: "outline" as const
@@ -62,9 +62,9 @@ const plans = [
     pricePerCredit: "R$ 5,50",
     features: [
       "20 imagens otimizadas",
-      "Qualidade premium",
-      "Suporte prioritário",
-      "Resultado em até 12h"
+      "Qualidade profissional",
+      "Suporte por email",
+      "Resultado em poucos minutos"
     ],
     popular: false,
     variant: "outline" as const
@@ -79,9 +79,9 @@ const plans = [
     pricePerCredit: "R$ 4,00",
     features: [
       "50 imagens otimizadas",
-      "Qualidade premium",
-      "Suporte prioritário",
-      "Resultado em até 12h"
+      "Qualidade profissional",
+      "Suporte por email",
+      "Resultado em poucos minutos"
     ],
     popular: true,
     variant: "premium" as const
@@ -96,9 +96,9 @@ const plans = [
     pricePerCredit: "R$ 3,50",
     features: [
       "100 imagens otimizadas",
-      "Qualidade ultra premium",
+      "Qualidade profissional",
       "Suporte VIP",
-      "Resultado em até 6h",
+      "Resultado em poucos minutos",
       "Consultoria personalizada"
     ],
     popular: false,
