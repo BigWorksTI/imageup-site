@@ -129,7 +129,7 @@ const Pricing = () => {
                 variant={plan.variant}
                 size="lg"
                 className="w-full"
-                onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
+                onClick={() => window.open('https://wa.me/5548998386116?text=Olá! Gostaria de comprar um plano de créditos para otimização de imagens.', '_blank')}
               >
                 Comprar agora
               </Button>

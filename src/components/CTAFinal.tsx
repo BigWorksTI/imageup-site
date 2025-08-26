@@ -37,7 +37,7 @@ const CTAFinal = () => {
               variant="premium" 
               size="xl"
               className="text-2xl py-6 px-12 mb-6"
-              onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
+              onClick={() => window.open('https://wa.me/5548998386116?text=Olá! Quero solicitar minha imagem bônus gratuita para testar o serviço.', '_blank')}
             >
               🎁 Quero minha imagem bônus no WhatsApp
             </Button>

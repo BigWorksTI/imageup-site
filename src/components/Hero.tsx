@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="text-center max-w-4xl">
             <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
               Otimização de imagens para anúncios que{" "}
-              <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-primary bg-clip-text text-transparent">
                 aumentam suas vendas
               </span>
             </h1>
@@ -33,7 +33,7 @@ const Hero = () => {
                 variant="hero" 
                 size="xl"
                 className="w-full sm:w-auto"
-                onClick={() => window.open('https://wa.me/5548998386116', '_blank')}
+                onClick={() => window.open('https://wa.me/5548998386116?text=Olá! Gostaria de solicitar uma imagem grátis para testar o serviço de otimização.', '_blank')}
               >
                 Peça uma imagem grátis
               </Button>
@@ -41,7 +41,8 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="xl"
-                className="w-full sm:w-auto text-white border-white/30 hover:bg-white/10 backdrop-blur-sm"
+                className="w-full sm:w-auto text-white border-white hover:bg-white/20 backdrop-blur-sm font-semibold"
+                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Ver como funciona
               </Button>

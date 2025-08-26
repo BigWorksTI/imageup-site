@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Como funciona a compra de créditos?",
-    answer: "Você escolhe um plano, realiza a compra e recebe créditos na sua conta. Cada envio de imagem consome créditos, simples assim. Os créditos não expiram e ficam disponíveis para uso quando você precisar."
+    answer: "Cada envio de imagem consome 1 crédito, simples assim. Os créditos não expiram e ficam disponíveis para uso quando você precisar."
   },
   {
     question: "Que tipo de imagem eu posso enviar?",
@@ -28,11 +28,11 @@ const faqs = [
   },
   {
     question: "Quanto tempo demora para receber as imagens?",
-    answer: "Dependendo do plano escolhido: Plano Inicial (24h), Plano Mais Vendido (12h), Plano Profissional (6h). Em casos urgentes, entre em contato que podemos acelerar o processo."
+    answer: "Dependendo do plano escolhido: Plano Inicial (24h), Plano Mais Vendido (12h), Plano Profissional (6h). Em casos urgentes, entre em contato."
   },
   {
     question: "Posso cancelar ou reembolsar créditos não usados?",
-    answer: "Os créditos não expiram, então você sempre pode usá-los quando precisar. Para situações específicas de reembolso, entre em contato com nosso suporte que analisaremos caso a caso."
+    answer: "Os créditos não expiram, então você sempre pode usá-los quando precisar. Para situações específicas de reembolso, entre em contato conosco."
   },
   {
     question: "Que tipo de otimização vocês fazem?",
@@ -101,7 +101,7 @@ const FAQ = () => {
               📧 imageup@bigworks.com.br
             </a>
             <a 
-              href="https://wa.me/5548998386116"
+              href="https://wa.me/5548998386116?text=Olá! Tenho dúvidas sobre o serviço de otimização de imagens."
               className="text-electric hover:text-electric-dark font-semibold transition-colors"
             >
               📱 WhatsApp
