@@ -88,7 +88,7 @@ const plans = [
   },
   {
     name: "100 Créditos",
-    subtitle: "para e-commerces",
+    subtitle: "profissional",
     price: "R$ 349,90",
     originalPrice: "R$ 750,00",
     credits: "100 créditos",
