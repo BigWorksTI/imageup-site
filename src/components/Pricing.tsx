@@ -2,11 +2,30 @@ import { Button } from "@/components/ui/button";
 
 const plans = [
   {
-    name: "Plano Inicial",
-    subtitle: "perfeito para testar",
-    price: "R$ 29,90",
-    originalPrice: "R$ 49,90",
+    name: "1 Crédito",
+    subtitle: "teste rápido",
+    price: "R$ 7,50",
+    originalPrice: null,
+    credits: "1 crédito",
+    discount: null,
+    pricePerCredit: "R$ 7,50",
+    features: [
+      "1 imagem otimizada",
+      "Qualidade profissional",
+      "Suporte por email",
+      "Resultado em até 24h"
+    ],
+    popular: false,
+    variant: "outline" as const
+  },
+  {
+    name: "5 Créditos",
+    subtitle: "economize 12%",
+    price: "R$ 32,90",
+    originalPrice: "R$ 37,50",
     credits: "5 créditos",
+    discount: "12%",
+    pricePerCredit: "R$ 6,58",
     features: [
       "5 imagens otimizadas",
       "Qualidade profissional",
@@ -17,11 +36,47 @@ const plans = [
     variant: "outline" as const
   },
   {
-    name: "Plano Mais Vendido",
+    name: "10 Créditos",
+    subtitle: "economize 20%",
+    price: "R$ 59,90",
+    originalPrice: "R$ 75,00",
+    credits: "10 créditos",
+    discount: "20%",
+    pricePerCredit: "R$ 5,99",
+    features: [
+      "10 imagens otimizadas",
+      "Qualidade profissional",
+      "Suporte por email",
+      "Resultado em até 24h"
+    ],
+    popular: false,
+    variant: "outline" as const
+  },
+  {
+    name: "20 Créditos",
+    subtitle: "economize 27%",
+    price: "R$ 109,90",
+    originalPrice: "R$ 150,00",
+    credits: "20 créditos",
+    discount: "27%",
+    pricePerCredit: "R$ 5,50",
+    features: [
+      "20 imagens otimizadas",
+      "Qualidade premium",
+      "Suporte prioritário",
+      "Resultado em até 12h"
+    ],
+    popular: false,
+    variant: "outline" as const
+  },
+  {
+    name: "50 Créditos",
     subtitle: "melhor custo-benefício",
-    price: "R$ 249,90",
-    originalPrice: "R$ 499,90",
+    price: "R$ 199,90",
+    originalPrice: "R$ 375,00",
     credits: "50 créditos",
+    discount: "47%",
+    pricePerCredit: "R$ 4,00",
     features: [
       "50 imagens otimizadas",
       "Qualidade premium",
@@ -32,11 +87,13 @@ const plans = [
     variant: "premium" as const
   },
   {
-    name: "Plano Profissional",
-    subtitle: "para e-commerces e tráfego pesado",
-    price: "R$ 399,90",
-    originalPrice: "R$ 999,90",
+    name: "100 Créditos",
+    subtitle: "para e-commerces",
+    price: "R$ 349,90",
+    originalPrice: "R$ 750,00",
     credits: "100 créditos",
+    discount: "53%",
+    pricePerCredit: "R$ 3,50",
     features: [
       "100 imagens otimizadas",
       "Qualidade ultra premium",
@@ -68,11 +125,11 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`relative rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 ${
+              className={`relative rounded-2xl p-6 transition-all duration-300 hover:transform hover:scale-105 ${
                 plan.popular 
                   ? 'bg-gradient-hero text-white shadow-glow border-2 border-white/20' 
                   : 'bg-card shadow-elegant hover:shadow-glow'
@@ -86,25 +143,32 @@ const Pricing = () => {
               )}
 
               {/* Plan Header */}
-              <div className="text-center mb-8">
-                <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-white' : 'text-dark'}`}>
+              <div className="text-center mb-6">
+                <h3 className={`text-xl font-bold mb-2 ${plan.popular ? 'text-white' : 'text-dark'}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm mb-4 ${plan.popular ? 'text-white/80' : 'text-gray-medium'}`}>
+                <p className={`text-xs mb-3 ${plan.popular ? 'text-white/80' : 'text-gray-medium'}`}>
                   {plan.subtitle}
                 </p>
                 <div className="mb-2">
                   <div className="flex items-center justify-center gap-2">
-                    <span className={`text-4xl font-bold ${plan.popular ? 'text-white' : 'text-dark'}`}>
+                    <span className={`text-3xl font-bold ${plan.popular ? 'text-white' : 'text-dark'}`}>
                       {plan.price}
                     </span>
                   </div>
-                  <div className={`text-sm ${plan.popular ? 'text-white/60' : 'text-gray-medium'}`}>
-                    <span className="line-through">{plan.originalPrice}</span>
-                  </div>
+                  {plan.originalPrice && (
+                    <div className={`text-xs ${plan.popular ? 'text-white/60' : 'text-gray-medium'}`}>
+                      <span className="line-through">{plan.originalPrice}</span>
+                      {plan.discount && (
+                        <span className={`ml-2 ${plan.popular ? 'text-white/80' : 'text-electric'}`}>
+                          Economize {plan.discount}
+                        </span>
+                      )}
+                    </div>
+                  )}
                 </div>
-                <p className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-medium'}`}>
-                  {plan.credits}
+                <p className={`text-xs ${plan.popular ? 'text-white/80' : 'text-gray-medium'}`}>
+                  {plan.credits} ({plan.pricePerCredit} cada)
                 </p>
               </div>
 
