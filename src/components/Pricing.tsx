@@ -8,7 +8,7 @@ const plans = [
     originalPrice: null,
     credits: "1 crédito",
     discount: null,
-    pricePerCredit: "R$ 7,50",
+    pricePerCredit: null,
     features: [
       "1 imagem otimizada",
       "Qualidade profissional",
@@ -24,7 +24,7 @@ const plans = [
     price: "R$ 32,90",
     originalPrice: "R$ 37,50",
     credits: "5 créditos",
-    discount: "12%",
+    discount: null,
     pricePerCredit: "R$ 6,58",
     features: [
       "5 imagens otimizadas",
@@ -41,7 +41,7 @@ const plans = [
     price: "R$ 59,90",
     originalPrice: "R$ 75,00",
     credits: "10 créditos",
-    discount: "20%",
+    discount: null,
     pricePerCredit: "R$ 5,99",
     features: [
       "10 imagens otimizadas",
@@ -58,7 +58,7 @@ const plans = [
     price: "R$ 109,90",
     originalPrice: "R$ 150,00",
     credits: "20 créditos",
-    discount: "27%",
+    discount: null,
     pricePerCredit: "R$ 5,50",
     features: [
       "20 imagens otimizadas",
@@ -80,7 +80,7 @@ const plans = [
     features: [
       "50 imagens otimizadas",
       "Qualidade profissional",
-      "Suporte por email",
+      "Suporte prioritário",
       "Resultado em poucos minutos"
     ],
     popular: true,
@@ -97,7 +97,7 @@ const plans = [
     features: [
       "100 imagens otimizadas",
       "Qualidade profissional",
-      "Suporte VIP",
+      "Suporte prioritário",
       "Resultado em poucos minutos",
       "Consultoria personalizada"
     ],
@@ -168,7 +168,7 @@ const Pricing = () => {
                   )}
                 </div>
                 <p className={`text-xs ${plan.popular ? 'text-white/80' : 'text-gray-medium'}`}>
-                  {plan.credits} ({plan.pricePerCredit} cada)
+                  {plan.credits}{plan.pricePerCredit && ` (${plan.pricePerCredit} cada)`}
                 </p>
               </div>
 
@@ -193,7 +193,7 @@ const Pricing = () => {
                 variant={plan.variant}
                 size="lg"
                 className="w-full"
-                onClick={() => window.open('https://wa.me/5548998386116?text=Olá! Gostaria de comprar um plano de créditos para otimização de imagens.', '_blank')}
+                onClick={() => window.open(`https://wa.me/5548998386116?text=Olá! Gostaria de comprar ${plan.credits} no ImageUp.`, '_blank')}
               >
                 Comprar agora
               </Button>
