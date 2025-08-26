@@ -41,7 +41,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="xl"
-                className="w-full sm:w-auto text-white border-white hover:bg-white/20 backdrop-blur-sm font-semibold"
+                className="w-full sm:w-auto text-white border-2 border-white bg-black/30 hover:bg-white hover:text-black backdrop-blur-sm font-semibold transition-all duration-300"
                 onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Ver como funciona
