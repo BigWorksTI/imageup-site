@@ -14,9 +14,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">IU</span>
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="ImageUp - Otimização de Imagens" 
+              className="h-8 w-auto object-contain"
+            />
             <span className="text-xl font-bold text-dark">ImageUp</span>
           </div>
 
