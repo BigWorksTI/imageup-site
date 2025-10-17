@@ -15,7 +15,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img 
-              src="/logo.png" 
+              src="/icon.png" 
               alt="ImageUp - Otimização de Imagens" 
               className="h-8 w-auto object-contain"
             />
