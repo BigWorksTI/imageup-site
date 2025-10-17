@@ -8,6 +8,8 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
+        role="img"
+        aria-label="Fundo com imagens de produtos otimizados para anúncios digitais"
       />
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40" />

@@ -26,7 +26,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="how-it-works" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -62,8 +62,9 @@ const HowItWorks = () => {
                 <div className="w-20 h-20 mx-auto mb-6 p-4 bg-gradient-subtle rounded-lg flex items-center justify-center">
                   <img 
                     src={step.icon} 
-                    alt={`Passo ${step.number}`}
+                    alt={`Ícone representando o passo ${step.number}: ${step.title}`}
                     className="w-12 h-12 object-contain"
+                    loading="lazy"
                   />
                 </div>
                 

@@ -82,6 +82,7 @@ const ImageComparison = ({ beforeImage, afterImage, beforeAlt, afterAlt }: Image
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
           onLoad={() => setAfterImageLoaded(true)}
+          loading="lazy"
         />
         
         {/* Before Image (Clipped) */}
@@ -95,6 +96,7 @@ const ImageComparison = ({ beforeImage, afterImage, beforeAlt, afterAlt }: Image
             className="w-full h-full object-cover"
             draggable={false}
             onLoad={() => setBeforeImageLoaded(true)}
+            loading="lazy"
           />
         </div>
         

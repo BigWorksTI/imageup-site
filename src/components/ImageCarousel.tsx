@@ -16,22 +16,22 @@ const ImageCarousel = () => {
       id: 1,
       beforeImage: newBefore,
       afterImage: newAfter,
-      beforeAlt: "Imagem antes da otimização",
-      afterAlt: "Imagem depois da otimização"
+      beforeAlt: "Exemplo de imagem de produto antes da otimização profissional para anúncios",
+      afterAlt: "Exemplo de imagem de produto após otimização profissional com melhor iluminação, cores e composição para aumentar conversão"
     },
     {
       id: 2,
       beforeImage,
       afterImage,
-      beforeAlt: "Imagem antes da otimização",
-      afterAlt: "Imagem depois da otimização"
+      beforeAlt: "Foto de produto comum sem tratamento para campanhas de marketing digital",
+      afterAlt: "Foto de produto otimizada com tratamento profissional para máxima performance em anúncios online"
     },
     {
       id: 3,
       beforeImage: beforeFood,
       afterImage: afterFood,
-      beforeAlt: "Foto de comida antes da otimização",
-      afterAlt: "Foto de comida depois da otimização"
+      beforeAlt: "Foto de comida simples antes da otimização para redes sociais e e-commerce",
+      afterAlt: "Foto de comida otimizada com cores vibrantes e composição atraente para gerar mais vendas em delivery e restaurantes"
     }
   ];
 
@@ -60,6 +60,7 @@ const ImageCarousel = () => {
         size="icon"
         className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white"
         onClick={prevSlide}
+        aria-label="Ver exemplo anterior de otimização de imagem"
       >
         ←
       </Button>
@@ -69,15 +70,19 @@ const ImageCarousel = () => {
         size="icon"
         className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white"
         onClick={nextSlide}
+        aria-label="Ver próximo exemplo de otimização de imagem"
       >
         →
       </Button>
 
       {/* Slide Indicators */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-2 mt-4" role="tablist" aria-label="Navegação de exemplos de otimização">
         {slides.map((_, index) => (
           <button
             key={index}
+            role="tab"
+            aria-selected={index === currentSlide}
+            aria-label={`Ver exemplo ${index + 1} de otimização`}
             className={`w-2 h-2 rounded-full transition-colors ${
               index === currentSlide ? 'bg-primary' : 'bg-gray-300'
             }`}
