@@ -16,7 +16,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="/icon.png" 
+                src="/ico.png" 
                 alt="ImageUp - Otimização de Imagens" 
                 className="h-8 w-auto object-contain"
               />
